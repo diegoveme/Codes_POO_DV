@@ -1,4 +1,5 @@
 public abstract class Empleado {
+    //atributos
     private String id;
     private String nombre;
     private double salarioBase;
@@ -10,7 +11,11 @@ public abstract class Empleado {
         this.salarioBase = salarioBase;
     }
 
+    //protected
+    protected double getSalarioBase() {
+        return salarioBase;
+    }
+
     //Metodo Abstracto:
     public abstract double calcularSalario();
-
 }
