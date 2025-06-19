@@ -20,8 +20,8 @@ public class Garage {
 
     //metodo retirar
     public boolean retirar(String placa){
-        for (int i = 0; i == placa.length(); i++){
-            if (espacios[i].getPlaca().equals(placa)){
+        for (int i = 0; i < espacios.length; i++) {
+            if (espacios[i] != null && espacios[i].getPlaca().equals(placa)) {
                 espacios[i] = null;
                 return true;
             }
@@ -33,10 +33,10 @@ public class Garage {
     public int contarVehiculo(){
         int a = 0;
         for (int i = 0; i < espacios.length; i++){
-            if (espacios[i] == null){
-                return a;
+            if (espacios[i] != null){
+                a++;
             }
         }
-        return 0;
+        return a;
     }
 }
