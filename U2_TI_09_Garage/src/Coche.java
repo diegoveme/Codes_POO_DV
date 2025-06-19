@@ -1,14 +1,14 @@
 public class Coche extends Vehiculo {
-    //Atributos
+    //atributo
     private int numPuertas;
 
-    //Constructor con los del padre
+    //contructor
     public Coche(String placa, String marca, int numPuertas) {
         super(placa, marca);
         this.numPuertas = numPuertas;
     }
 
-    //Getter
+    //metodo
     public int getNumPuertas() {
         return numPuertas;
     }

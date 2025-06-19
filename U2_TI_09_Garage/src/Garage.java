@@ -1,35 +1,39 @@
 public class Garage {
+    //atributo
     private Vehiculo[] espacios;
 
-    //Constructor
+    //constructor
     public Garage(int numEspacios){
         espacios = new Vehiculo[numEspacios];
     }
 
-    //Metodos
+    //metodo estacionar
     public boolean estacionar(Vehiculo v){
-        for (int i=0; i<espacios.length; i++){
-            if (espacios[i].equals(v)){
-                return true;
-            }
-        }
-        return false;
-    }
-    public boolean retirar(String placa){
-        for (int i=0; i==placa.length(); i++){
-            if (espacios[i].getPlaca().equals(placa)){
-                espacios[i]= null;
+        for (int i = 0; i < espacios.length; i++){
+            if (espacios[i]==null){
+                espacios[i] = v;
                 return true;
             }
         }
         return false;
     }
 
+    //metodo retirar
+    public boolean retirar(String placa){
+        for (int i = 0; i == placa.length(); i++){
+            if (espacios[i].getPlaca().equals(placa)){
+                espacios[i] = null;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //metodo contar
     public int contarVehiculo(){
-        int a=0;
-        for (int i=0; i<espacios.length; i++){
-            if(espacios[i]==null){
-                a++;
+        int a = 0;
+        for (int i = 0; i < espacios.length; i++){
+            if (espacios[i] == null){
                 return a;
             }
         }

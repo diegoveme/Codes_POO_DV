@@ -1,15 +1,15 @@
-public abstract class Vehiculo{
+public abstract class Vehiculo {
     //atributos
     protected String placa;
     protected String marca;
 
-    //Constructor
+    //constructor
     public Vehiculo(String placa, String marca){
         this.placa = placa;
         this.marca = marca;
     }
 
-    //Getters
+    //metodos
     public String getPlaca(){
         return placa;
     }
